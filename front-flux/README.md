@@ -1,7 +1,5 @@
 # Node 环境
-
 8.11.1
-公司私库NPM镜像地址: http://maven-local.mobisummer-inc.com/repository/npm/
 
 # 目录规范说明
 
