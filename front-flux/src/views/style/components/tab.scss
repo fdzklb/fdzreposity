@@ -1,0 +1,56 @@
+@import '../variables';
+@import '../fontStyle';
+
+$COMMON-TABS-TAB__border: 0;
+$COMMON-TABS-TAB__color: #b3b3b3;
+$COMMON-TABS-TAB__font-size: 18px;
+$COMMON-TABS-TAB-ACTIVE__font-size: 18px;
+$COMMON-TABS-ITEM-INPUT__border-width: 2px;
+$COMMON-TABS-ITEM-INPUT__border-color: #dee1e9;
+$COMMON-TABS-ITEM-INPUT__border-radius: 4px;
+$COMMON-TABS-ITEM-INPUT__height: 42px;
+$COMMON-TABS-ITEM-INPUT__font-size: 13px;
+$COMMON-TABS-ITEM-INPUT__font-weight: 600;
+$COMMON-TABS-ITEM-INPUT-LG__height: 42px;
+$COMMON-TABS-ITEM-LABEL-LABEL__color: #323c47;
+$COMMON-TABS-ITEM-LABEL-LABEL__font-size: 14px;
+$COMMON-TABS-ITEM-LABEL__line-height: 42px;
+
+/* tab
+//-----------------------------------------------------------*/
+
+:global(.ant-tabs-bar) {
+  border-bottom: 1px solid #efeff0;
+}
+
+:global(.ant-tabs-tab) {
+  height: 72px;
+  line-height: 72px;
+  border: $COMMON-TABS-TAB__border !important;
+  color: $COMMON-TABS-TAB__color !important;
+  font-size: $COMMON-TABS-TAB__font-size;
+  @include mobi-font-H3;
+  background: transparent !important;
+  margin-top: 0px;
+}
+
+:global(.ant-tabs-nav) :global(.ant-tabs-tab-active),
+:global(.ant-tabs-tab-active) {
+  @include mobi-font-H2;
+  color: #323c47 !important;
+  font-size: $COMMON-TABS-TAB-ACTIVE__font-size;
+}
+
+:global(.ant-tabs-nav),
+:global(.ant-tabs-tab) {
+  margin-right: 64px !important;
+  padding: 0 16px !important;
+}
+
+:global(.ant-tabs-tab):hover {
+  color: $theme-color !important;
+}
+
+:global(.ant-tabs-ink-bar) {
+  background-color: $theme-color !important;
+}

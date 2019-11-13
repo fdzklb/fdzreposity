@@ -1,0 +1,23 @@
+:global(.ant-layout-sider-children) {
+  height: 100% !important;
+}
+
+:global(.ant-layout) {
+  background-color: rgb(241, 245, 248);
+}
+
+:global(.ant-layout-content) {
+  background-color: #f1f5f8;
+  min-width: 934px;
+  margin-top: 56px;
+}
+
+:global(.ant-layout-header) {
+  padding: 0;
+  height: 56px;
+}
+
+:global(.ant-layout-sider) {
+  background-color: #0d0c2b;
+  z-index: 2000;
+}

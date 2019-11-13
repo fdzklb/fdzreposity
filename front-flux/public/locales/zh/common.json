@@ -1,0 +1,40 @@
+{
+  "signOut": "退出",
+  "dashboard": "我是控制面板",
+  "report": "我是报表",
+  "secondView": "我是二级页面",
+  "copy": {
+    "success": "复制成功！",
+    "fail": "复制失败！"
+  },
+  "lng": {
+    "zh": "中文",
+    "en": "English"
+  },
+  "toast": {
+    "defaultTitle": "提示"
+  },
+  "menu": {
+    "dashboard": "控制面板",
+    "report": "报表",
+    "login": "登录",
+    "error": "错误",
+    "account": "账户管理",
+    "second": "二级页面"
+  },
+  "btn": {
+    "back": "返回",
+    "secondView": "二级页面",
+    "copy": "复制",
+    "edit": "编辑",
+    "save": "保存",
+    "cancel": "取消",
+    "search": "搜寻",
+    "add": "添加",
+    "commentList": "查看评论",
+    "delete": "删除"
+  },
+  "placeholder": {
+    "enter": "请输入"
+  }
+}

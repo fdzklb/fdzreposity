@@ -1,0 +1,11 @@
+mutation(
+   $userId: Int
+   $comment: String
+){
+  updateComment(parameters:{
+    userId:$userId
+    comment: $comment
+  }){
+    userId
+  }
+}

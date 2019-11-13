@@ -1,0 +1,55 @@
+@import '../variables';
+@import '../fontStyle';
+
+/*input
+===================================================*/
+
+:global {
+  .ant-input {
+    @include mobi-font-P4;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
+    border: 2px solid #dee1e9;
+  }
+
+  .ant-input:hover {
+    border-color: #c3c7db;
+  }
+
+  .ant-input:focus,
+  .ant-input:active {
+    border: 1px $theme-color solid !important;
+    box-shadow: 0 0 5px $theme-color !important;
+  }
+
+  .ant-input::-moz-placeholder {
+    color: #bfbfbf;
+    opacity: 1;
+    font-size: 14px;
+  }
+
+  .ant-input:-ms-input-placeholder {
+    color: #bfbfbf;
+    font-size: 14px;
+  }
+
+  .ant-input::-webkit-input-placeholder {
+    color: #bfbfbf;
+    font-size: 14px;
+  }
+
+  .ant-input-affix-wrapper {
+    > .ant-input {
+      &:hover {
+        border-color: #c3c7db !important;
+      }
+
+      &:focus,
+      &:active {
+        border: 1px $theme-color solid !important;
+        box-shadow: 0 0 5px $theme-color !important;
+      }
+    }
+  }
+}

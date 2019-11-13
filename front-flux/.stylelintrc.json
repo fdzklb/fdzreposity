@@ -1,0 +1,17 @@
+{
+  "ignoreFiles": ["./node_modules/*", "./src/assets/*"],
+  "rules": {
+    "string-quotes": "single",
+    "block-closing-brace-empty-line-before": ["never", {}],
+    "block-opening-brace-space-before": "always",
+    "rule-empty-line-before": [
+      "always-multi-line",
+      { "except": ["first-nested"] }
+    ],
+    "indentation": 2,
+    "selector-class-pattern": [
+      "^[a-z]+((-{1,2}|_{1,2})[a-z]+)*$",
+      { "resolveNestedSelectors": true }
+    ]
+  }
+}

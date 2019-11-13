@@ -1,0 +1,11 @@
+query {
+  getUser {   
+    userId
+    userName
+    email
+    country
+    phone
+    firstName
+    lastName
+  }
+}

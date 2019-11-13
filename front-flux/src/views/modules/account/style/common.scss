@@ -1,0 +1,36 @@
+@import '../../../style/components/input';
+@import '../../../style/components/select';
+@import '../../../style/components/button';
+@import '../../../style/fontStyle';
+
+.account_container {
+  :global(.ant-form-item-label) label:after {
+    content: ' ' !important;
+  }
+
+  //product form iterm
+
+  :global(.ant-form-item-required:before) {
+    content: '' !important;
+  }
+
+  :global(.ant-form-item-required:after) {
+    content: '' !important;
+  }
+
+  :global(.ant-form-item-label) label {
+    @include mobi-font-P4;
+  }
+
+  :global(.ant-form-item-label) {
+    line-height: 42px;
+  }
+
+  :global(.ant-tabs-ink-bar-animated) {
+    margin: auto !important;
+  }
+}
+
+.hide {
+  display: none;
+}

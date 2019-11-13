@@ -1,0 +1,31 @@
+{
+  "userTitle": "用户信息",
+  "passwordTitle": "修改密码",
+  "userContent": {
+    "accountInfo": "账户信息",
+    "onlineContact": "在线联系",
+    "userName": "用户名",
+    "email": "邮箱",
+    "phone": "电话",
+    "country": "国家"
+  },
+  "editSuccess": "保存成功",
+  "passwordContent": {
+    "currentPassword": "原密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "changeSuccess": "密码修改成功",
+    "changeFail": "密码修改失败，请重试"
+  },
+  "placeholder": {
+    "password": "密码"
+  },
+  "btn": {
+    "changePassword": "修改密码"
+  },
+  "validate": {
+    "passwordRequired": "请输入密码",
+    "passwordLength": "密码长度为6 - 24个字符",
+    "passwordNotMatch": "确认密码与新密码不一致"
+  }
+}

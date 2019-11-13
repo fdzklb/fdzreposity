@@ -1,0 +1,262 @@
+@import './variables.scss';
+
+@mixin mobi-font-H1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-H2 {
+  font-size: 18px;
+  font-weight: 900;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-H3 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-H4 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-H5 {
+  font-size: 14px;
+  font-weight: 900;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-H6 {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-H7 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #515cf0;
+}
+
+@mixin mobi-font-H8 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #aac0da;
+}
+
+@mixin mobi-font-P1 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-P2 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-P3 {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #82888e;
+}
+
+@mixin mobi-font-P4 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-P5 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #323c47;
+  font-style: italic;
+}
+
+@mixin mobi-font-P6 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #82888e;
+}
+
+@mixin mobi-font-P7 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #bcc4ca;
+}
+
+@mixin mobi-font-P8 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #0dbd2a;
+}
+
+@mixin mobi-font-P9 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #515cf0;
+}
+
+@mixin mobi-font-P10 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #f20000;
+}
+
+@mixin mobi-font-P11 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #fff;
+}
+
+@mixin mobi-font-P12 {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-P13 {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-P14 {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: $font-family-base;
+  color: #82888e;
+}
+
+@mixin mobi-font-P15 {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #323c47;
+}
+
+@mixin mobi-font-P16 {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #82888e;
+}
+
+@mixin mobi-font-P17 {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #bcc4ca;
+}
+
+@mixin mobi-font-P18 {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #515cf0;
+}
+
+@mixin mobi-font-P19 {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #fff;
+}
+
+@mixin mobi-font-P20 {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: $font-family-base;
+  color: #fff;
+  font-style: italic;
+}
+
+@mixin mobi-font-N1 {
+  font-size: 44px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #4d5660;
+}
+
+@mixin mobi-font-N2 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #4d5660;
+}
+
+@mixin mobi-font-N3 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #4d5660;
+}
+
+@mixin mobi-font-N4 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: $font-family-base;
+  color: #4d5660;
+}
+
+@mixin mobi-font-N5 {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #4d5660;
+}
+
+@mixin mobi-font-N6 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: $font-family-base;
+  color: #4d5660;
+}
+
+@mixin mobi-font-N7 {
+  font-size: 13px;
+  color: #323c47;
+  font-weight: 400;
+  font-family: $font-family-base;
+}
+
+@mixin mobi-font-N8 {
+  font-size: 12px;
+  color: #4d5660;
+  font-weight: 500;
+  font-family: $font-family-base;
+}
+
+@mixin mobi-font-N9 {
+  font-size: 18px;
+  color: #82888e;
+  font-weight: 500;
+  font-family: $font-family-base;
+}

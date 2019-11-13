@@ -1,0 +1,31 @@
+{
+  "userTitle": "User Info",
+  "passwordTitle": "Change Password",
+  "userContent": {
+    "accountInfo": "Account Information",
+    "onlineContact": "Online Contact",
+    "userName": "User Name",
+    "email": "用户名",
+    "phone": "Phone",
+    "country": "Country"
+  },
+  "editSuccess": "Save Successfully",
+  "passwordContent": {
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "changeSuccess": "Change password successfully",
+    "changeFail": "Change password failed, please try again"
+  },
+  "placeholder": {
+    "password": "Password"
+  },
+  "btn": {
+    "changePassword": "Change Password"
+  },
+  "validate": {
+    "passwordRequired": "Please input your Password",
+    "passwordLength": "New password must be between 6 and 24 characters",
+    "passwordNotMatch": "Password confirmation doesn't match"
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../../../style/fontStyle';
+
+.change_lng {
+  color: #fff;
+  display: inline-block;
+  line-height: 56px;
+  vertical-align: middle;
+
+  > button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    height: 100%;
+    @include mobi-font-P19;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .lng_active {
+    text-decoration: underline;
+  }
+}

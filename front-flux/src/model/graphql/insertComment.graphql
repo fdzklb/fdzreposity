@@ -1,0 +1,11 @@
+mutation(
+  $userName: String
+  $comment: String
+){
+  insertComment(parameters:{
+    userName: $userName
+    comment: $comment
+  }){
+    userId
+  }
+}

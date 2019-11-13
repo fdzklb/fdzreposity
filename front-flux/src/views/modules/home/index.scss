@@ -1,0 +1,176 @@
+@import '../../style/fontStyle.scss';
+
+.home_container {
+  height: 100%;
+
+  .home_slider {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  // main logo
+
+  .brand_logo {
+    width: 240px;
+    padding-left: 24px;
+    background-color: #3f7aff;
+
+    & > div {
+      display: flex;
+      height: 56px;
+      color: #fff;
+      align-items: center;
+    }
+
+    i[class*='anticon-tof-logo'] {
+      font-size: 30px;
+    }
+
+    h1 {
+      @include mobi-font-H1;
+      width: 109px;
+      height: 54px;
+      color: #fff;
+      background: url('../../../assets/images/mpp.png') no-repeat center center /
+        cover;
+    }
+  }
+
+  .main_icon {
+    width: 30px;
+    height: 30px;
+    background: url('../../../assets/images/logo.png') no-repeat center center /
+      cover;
+  }
+
+  .menu {
+    background-color: $mobi-color-navigation;
+    box-sizing: content-box;
+
+    .menu_item {
+      position: relative;
+      height: 48px !important;
+      margin: 0;
+      line-height: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+      a {
+        height: 48px;
+        @include mobi-font-P6;
+        color: #aac0da;
+
+        i {
+          margin-right: 20px;
+          font-size: 23px;
+          line-height: 48px;
+          vertical-align: middle;
+        }
+      }
+
+      &[class*='ant-menu-item'] {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .collapse_btn {
+    position: fixed;
+    bottom: 0px;
+    color: $white-base;
+    text-align: center;
+    cursor: pointer;
+    background: #332f53;
+    padding: 8px 0;
+  }
+
+  // header
+
+  .header_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+
+    .header {
+      display: flex;
+      height: 56px;
+      padding: 0 76px;
+      background-image: linear-gradient(87deg, #3f50d2 0%, #6a52e7 100%);
+
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header_bread {
+      @include mobi-font-H3;
+      color: #fff;
+    }
+
+    .action_bar {
+      display: flex;
+      align-items: center;
+
+      .user_name {
+        width: 100px;
+        margin: 0 32px;
+        cursor: pointer;
+      }
+
+      div {
+        height: 56px;
+        line-height: 56px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #fff;
+
+        i {
+          vertical-align: middle;
+          margin-right: 10px;
+          font-size: 20px;
+        }
+
+        span {
+          @include mobi-font-P19;
+        }
+      }
+    }
+
+    .change_lng {
+      color: #fff;
+      display: inline-block;
+      line-height: 56px;
+      vertical-align: middle;
+
+      > button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        height: 100%;
+        @include mobi-font-P19;
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .lng_active {
+        text-decoration: underline;
+      }
+    }
+
+    .sign_out {
+      @include mobi-font-P19;
+      cursor: pointer;
+    }
+  }
+}

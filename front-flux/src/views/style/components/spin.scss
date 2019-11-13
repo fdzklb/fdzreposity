@@ -1,0 +1,18 @@
+@import '../variables';
+
+/* spin
+//-----------------------------------------------------------*/
+
+:global(.ant-spin) {
+  left: 0 !important;
+}
+
+:global(.ant-spin-dot) {
+  i {
+    background-color: $theme-color !important;
+  }
+}
+
+:global(.ant-spin-text) {
+  color: $theme-color;
+}

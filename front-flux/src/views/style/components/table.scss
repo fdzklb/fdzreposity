@@ -1,0 +1,45 @@
+@import '../variables';
+@import '../fontStyle';
+
+/*table
+==========================================================*/
+
+:global(.ant-table),
+:global(.ant-table-body) {
+  background: #ffffff;
+}
+
+:global(.ant-table-thead) {
+  background: #f1f3f8;
+  @include mobi-font-P4;
+  height: 56px;
+  border: 1px solid #e7e9f0;
+}
+
+:global(.ant-table-tbody) {
+  background: #ffffff;
+  @include mobi-font-P4;
+  height: 48px;
+}
+
+:global(.ant-table-tbody) > tr:hover > td {
+  background: #f9fbfb !important;
+}
+
+:global(.ant-table-tbody) > tr > td {
+  @include mobi-font-P4;
+  color: #323c47 !important;
+  border-bottom: 1px solid #e7e9f0;
+}
+
+:global(.ant-table-thead) > tr > th {
+  @include mobi-font-P6;
+  color: #82888e !important;
+  font-weight: normal;
+  background: #f1f3f8;
+}
+
+:global(.anticon-caret-up:before),
+:global(.anticon-caret-down:before) {
+  color: #82888e;
+}

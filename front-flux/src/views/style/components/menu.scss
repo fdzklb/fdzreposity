@@ -1,0 +1,46 @@
+@import '../variables';
+@import '../fontStyle';
+
+/* menu
+//------------------------------------------------*/
+
+:global(.ant-menu-item) {
+  @include mobi-font-P9;
+  color: #fff;
+}
+
+:global(.ant-menu-item):after {
+  border: 0 !important;
+}
+
+:global(.ant-layout-sider-trigger) {
+  background-color: transparent;
+}
+
+:global(.ant-menu-item-selected) {
+  box-sizing: border-box;
+  background-color: #191632 !important;
+}
+
+:global(.ant-menu-item-selected) a {
+  color: $theme-menu-active !important;
+}
+
+:global(.ant-menu-item):hover,
+:global(.ant-menu-item-selected):hover {
+  color: $theme-menu-active;
+}
+
+:global(.ant-menu-item-selected):before {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  content: '';
+  width: 0;
+  height: 24px;
+  border-left: 4px solid $theme-menu-active !important;
+}
+
+:global(.ant-menu-inline-collapsed) > .ant-menu-item {
+  padding: 0 !important;
+}

@@ -1,0 +1,168 @@
+@import '../variables';
+@import '../fontStyle';
+
+$btnWidth: 125px;
+$btnHeight: 40px;
+$themeColor: rgb(81, 92, 240);
+$drakThemeColor: rgb(43, 55, 215);
+$themeColorGradient: linear-gradient(
+  180deg,
+  rgba(81, 92, 240, 1) 0%,
+  rgba(75, 139, 255, 1) 100%
+);
+
+//disableBtn
+$green: #0dbd2a;
+
+//gray deg
+$lightGray: #f1f2f7;
+$middleGray: #dee1e9;
+$drakGray: #c3c7db;
+
+//常规：覆盖ant-btn
+//不作引用：覆盖ant-ghost
+//引用：覆盖ant-primary
+//禁用：覆盖ant-disabled
+//虚线：覆盖ant-dash
+
+// <Button type="defalut">常规default</Button>
+// <Button ghost>不引导ghost</Button>
+// <Button type="dash">dash添加</Button>
+// <Button disabled>禁用disable</Button>
+// <Button type="primary">引导primary</Button>
+
+:global {
+  // defaultBtn
+  // foucs+hover,遗留左右border颜色问题
+  // foucs时，hover，有active状态
+
+  .ant-btn {
+    @include mobi-font-P4;
+    width: $btnWidth;
+    height: $btnHeight;
+    line-height: 36px;
+    color: $themeColor;
+    background-color: transparent;
+    border: 2px solid $themeColor;
+    border-radius: 4px;
+
+    &:hover {
+      color: #fff;
+      background-color: $themeColor;
+      border-color: transparent;
+
+      &:focus {
+        color: #fff;
+        background-image: $themeColorGradient;
+        border-top-color: rgba(81, 92, 240, 1);
+        border-right-color: $themeColor;
+        border-bottom-color: rgba(75, 139, 255, 1);
+        border-left-color: $themeColor;
+      }
+    }
+
+    &:focus {
+      color: $themeColor;
+      background-color: transparent;
+      border-color: $themeColor;
+    }
+
+    &:active {
+      color: #fff;
+      background-image: $themeColorGradient;
+      border: 0;
+    }
+    //disabledBtn
+
+    &[disabled] {
+      color: $green;
+      background-color: $lightGray;
+      border: 2px solid $middleGray;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $green;
+        background-color: $lightGray;
+        border-color: $middleGray;
+      }
+    }
+
+    //ghostBtn
+
+    &.ant-btn-background-ghost {
+      color: $themeColor;
+      border-color: $middleGray;
+
+      &:hover {
+        border-color: $drakGray;
+
+        &:focus {
+          color: $themeColor;
+        }
+      }
+
+      &:active {
+        color: #fff;
+        background-color: $drakGray !important;
+        border: 2px solid $drakGray;
+        background-image: none;
+      }
+    }
+  }
+  //dashBtn
+
+  .ant-btn-dash {
+    border: 2px dashed $middleGray;
+
+    &:hover {
+      color: $themeColor;
+      background-color: transparent;
+      border-color: $themeColor;
+      border-style: dashed;
+
+      &:focus {
+        color: $themeColor;
+        background-color: transparent;
+        background-image: none;
+        border-color: $themeColor;
+      }
+    }
+
+    &:focus {
+      color: $themeColor;
+      background-color: transparent;
+      background-image: none;
+      border-color: $middleGray;
+    }
+
+    &:active {
+      color: $themeColor;
+      background-color: transparent;
+      background-image: none;
+      border: 2px dashed $themeColor;
+    }
+  }
+
+  //primaryBtn
+
+  .ant-btn-primary {
+    color: #fff;
+    background-color: $themeColor;
+    border-width: 0;
+    outline: 0;
+
+    &:hover {
+      background-color: $drakThemeColor;
+    }
+
+    &:focus {
+      color: #fff;
+      background-color: $themeColor;
+    }
+
+    &:active {
+      background-image: $themeColorGradient;
+    }
+  }
+}

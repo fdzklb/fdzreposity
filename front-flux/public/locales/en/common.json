@@ -1,0 +1,40 @@
+{
+  "signOut": "Sign Out",
+  "dashboard": "I'm Dashboard",
+  "report": "I'm Report",
+  "secondView": "I'm SecondView",
+  "copy": {
+    "success": "Copy Successfully!",
+    "fail": "Copy failed!"
+  },
+  "lng": {
+    "zh": "中文",
+    "en": "English"
+  },
+  "toast": {
+    "defaultTitle": "Notification"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "report": "Report",
+    "login": "Login",
+    "error": "Error",
+    "account": "Account",
+    "second": "Second"
+  },
+  "btn": {
+    "back": "Back",
+    "secondView": "SecondView",
+    "copy": "Copy",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "search": "Search",
+    "add": "Add",
+    "commentList": "CommentList",
+    "delete": "Delete"
+  },
+  "placeholder": {
+    "enter": "Please Enter"
+  }
+}

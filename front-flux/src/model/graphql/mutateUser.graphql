@@ -1,0 +1,19 @@
+mutation(
+  $userName: String
+  $email: String
+  $country: String
+  $phone: String
+  $firstName: String
+  $lastName: String
+){
+  mutateUser(parameters:{
+    userName: $userName
+    email: $email
+    country: $country
+    phone: $phone
+    firstName: $firstName
+    lastName: $lastName
+  }){
+    userId
+  }
+}

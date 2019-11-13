@@ -1,0 +1,6 @@
+// set toast z-index
+
+:global(.ant-notification) {
+  z-index: 20000;
+  top: 88px !important;
+}

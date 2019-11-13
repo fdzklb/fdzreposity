@@ -1,0 +1,57 @@
+@import './common';
+@import '../../../style/variables';
+@import '../../../style/fontStyle';
+
+.account__contact__del {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+  left: 38px;
+  background: #828d9a !important;
+  color: #eff1f4 !important;
+  border-radius: 33px;
+}
+
+.account__contact__del:hover {
+  background: #eff1f4 !important;
+  color: #828d9a !important;
+}
+
+.account__contact__del:active {
+  background: #eff1f4 !important;
+  color: #515cf0 !important;
+}
+
+.account__contact__add {
+  @include mobi-font-P1;
+  font-size: 25px !important;
+
+  width: 165px !important;
+}
+
+.account__contact__select {
+  width: 148px !important;
+}
+
+.account__contact__input {
+  width: 425px;
+  margin-left: 0;
+}
+
+.delete_btn {
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  left: 12px;
+}
+
+.icon_add {
+  font-size: 24px;
+  color: #515cf0;
+  line-height: 40px !important;
+}

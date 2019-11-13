@@ -1,0 +1,51 @@
+@import './common';
+@import '../../../style/fontStyle';
+
+.detail_title {
+  margin-bottom: 32px;
+  @include mobi-font-H4;
+}
+
+.account__info__button {
+  margin-top: 32px;
+  margin-bottom: 0;
+
+  button + button {
+    margin-left: 32px;
+  }
+}
+
+.account__info__input {
+  width: 425px !important;
+  margin-left: 36px;
+}
+
+.account__info__form {
+  margin-left: 32px;
+  padding-bottom: 4px;
+
+  :global {
+    .ant-form-item-label {
+      text-align: left;
+      @include mobi-font-P4;
+    }
+  }
+}
+
+.account__info__phone_ac {
+  width: 130px;
+}
+
+.account__info__phone {
+  margin-left: -110px;
+  width: 278px;
+}
+
+.account__info__row {
+  margin-top: 64px;
+}
+
+.account__info__user {
+  @include mobi-font-P6;
+  margin-left: 55px;
+}

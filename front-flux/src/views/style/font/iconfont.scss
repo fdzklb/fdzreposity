@@ -1,0 +1,194 @@
+/* icon-font
+==========================================================*/
+@font-face {
+  font-family: 'anticon-font';
+
+  src: url('../../assets/fonts/iconfont/iconfont.eot'); /* IE9*/
+  src: url('../../assets/fonts/iconfont/iconfont.eot')
+    format('embedded-opentype'),
+    url('../../assets/fonts/iconfont/iconfont.woff') format('woff'),
+    url('../../assets/fonts/iconfont/iconfont.ttf') format('truetype'),
+    url('../../assets/fonts/iconfont/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+/**
+* anticon definition
+*/
+
+:global {
+  .anticon:before {
+    font-family: 'anticon', 'anticon-font' !important;
+  }
+
+  .anticon-tof-android:before {
+    content: '\e829';
+  }
+
+  .anticon-tof-icon:before {
+    content: '\e832';
+  }
+
+  .anticon-tof-ios:before {
+    content: '\e830';
+  }
+
+  .anticon-tof-js:before {
+    content: '\e831';
+  }
+
+  .anticon-tof-publisher:before {
+    content: '\e827';
+  }
+
+  .anticon-tof-postback:before {
+    content: '\e826';
+  }
+
+  .anticon-tof-api:before {
+    content: '\e825';
+  }
+
+  .anticon-tof-note:before {
+    content: '\e824';
+  }
+
+  .anticon-tof-alarm:before {
+    content: '\e823';
+  }
+
+  .anticon-tof-finance:before {
+    content: '\e822';
+  }
+
+  .anticon-tof-drop-down:before {
+    content: '\e821';
+  }
+
+  .anticon-tof-block-list:before {
+    content: '\e820';
+  }
+
+  .anticon-tof-sdk:before {
+    content: '\e818';
+  }
+
+  .anticon-tof-arrow-full:before {
+    content: '\e817';
+  }
+
+  .anticon-tof-list:before {
+    content: '\e816';
+  }
+
+  .anticon-tof-return:before {
+    content: '\e815';
+  }
+
+  .anticon-tof-angle-down:before {
+    content: '\e814';
+  }
+
+  .anticon-tof-link:before {
+    content: '\e813';
+  }
+
+  .anticon-tof-hot:before {
+    content: '\e812';
+  }
+
+  .anticon-tof-add-full:before {
+    content: '\e811';
+  }
+
+  .anticon-tof-check:before {
+    content: '\e810';
+  }
+
+  .anticon-tof-close:before {
+    content: '\e809';
+  }
+
+  .anticon-tof-close-full:before {
+    content: '\e808';
+  }
+
+  .anticon-tof-arrow-up:before {
+    content: '\e807';
+  }
+
+  .anticon-tof-arrow-down:before {
+    content: '\e806';
+  }
+
+  .anticon-tof-edit:before {
+    content: '\e805';
+  }
+
+  .anticon-tof-message:before {
+    content: '\e804';
+  }
+
+  .anticon-tof-date:before {
+    content: '\e803';
+  }
+
+  .anticon-tof-offer:before {
+    content: '\e802';
+  }
+
+  .anticon-tof-dashboard:before {
+    content: '\e801';
+  }
+
+  .anticon-tof-download:before {
+    content: '\e828';
+  }
+
+  .anticon-tof-report:before {
+    content: '\e833';
+  }
+
+  .anticon-tof-email:before {
+    content: '\e840';
+  }
+
+  .anticon-tof-quote:before {
+    content: '\e841';
+  }
+
+  .anticon-tof-hollow-qq:before {
+    content: '\e842';
+  }
+
+  .anticon-tof-info:before {
+    content: '\e843';
+  }
+
+  .anticon-tof-full-close:before {
+    content: '\e834';
+  }
+
+  .anticon-tof-offers:before {
+    content: '\e835';
+  }
+
+  .anticon-tof-logo:before {
+    content: '\e836';
+  }
+
+  .anticon-tof-qq:before {
+    content: '\e837';
+  }
+
+  .anticon-tof-skype:before {
+    content: '\e838';
+  }
+
+  .anticon-tof-eye-close:before {
+    content: '\e844';
+  }
+
+  .anticon-tof-eye:before {
+    content: '\e845';
+  }
+}

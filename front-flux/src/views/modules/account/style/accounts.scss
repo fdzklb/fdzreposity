@@ -1,0 +1,22 @@
+@import './common';
+
+.account_container {
+  width: 974px;
+  margin: 32px auto 0;
+
+  .account_box {
+    width: 974px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.1);
+    padding: 0 32px 32px 32px;
+  }
+
+  .tab__margin {
+    margin-right: 58px !important;
+  }
+}
+
+:global(.ant-tabs-bar) {
+  margin-bottom: 32px;
+}

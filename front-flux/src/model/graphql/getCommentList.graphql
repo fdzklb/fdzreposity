@@ -1,0 +1,13 @@
+query (
+  $userId: Int
+  $userName: String
+){
+  getCommentList(parameters:{
+     userId:$userId
+     userName:$userName
+    }){
+    userId
+    userName
+    comment
+  }
+}

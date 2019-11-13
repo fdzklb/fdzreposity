@@ -1,0 +1,142 @@
+@import '../../style/variables.scss';
+@import '../../style/fontStyle.scss';
+@import '../../style/reset.scss';
+
+$themeColor: #5b66ff;
+$gray: #bcc4ca;
+
+@mixin min-screen($res) {
+  @media only screen and (min-width: $res) {
+    @content;
+  }
+}
+
+.background_wrapper {
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  min-height: 600px;
+  background: no-repeat url('../../../assets/images/login/back.png');
+  background-attachment: local;
+
+  @include min-screen(1920px) {
+    & {
+      background-size: cover;
+    }
+  }
+
+  .mark_box {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #01051a, $alpha: 0.2);
+  }
+
+  @at-root .login {
+    display: flex;
+    width: 100%;
+    max-width: 1366px;
+    height: 100%;
+    padding: 0 60px;
+    margin: 0 auto;
+
+    @include min-screen(1200px) {
+      & {
+        padding: 0 120px;
+      }
+    }
+
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      padding-bottom: 165px;
+      font-family: $font-family-base;
+      font-size: 58px;
+      line-height: 73px;
+      color: #fff;
+      text-align: center;
+
+      i {
+        font-family: $login-italic;
+      }
+    }
+
+    @at-root .logo {
+      width: 155px;
+      height: 52px;
+      margin: 10px auto 25px;
+      background: url('../../../assets/images/login/mpp.png') no-repeat;
+      background-size: cover;
+    }
+
+    @at-root .loginForm {
+      width: 430px;
+      min-width: 430px;
+      padding: 44px 34px 34px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.5);
+
+      input {
+        width: 100%;
+        height: 50px;
+        padding-left: 10px;
+        border: none;
+        border-bottom: 2px solid #d6d7e7;
+        outline: none;
+        transition: border-bottom ease 0.2s;
+        @include mobi-font-P2;
+
+        &:focus {
+          border-color: $themeColor;
+        }
+
+        & + input {
+          margin-top: 13px;
+        }
+      }
+
+      ::-moz-placeholder {
+        color: $gray;
+      }
+
+      ::-webkit-input-placeholder {
+        color: $gray;
+      }
+
+      :-ms-input-placeholder {
+        color: $gray;
+      }
+
+      @at-root .errInfo {
+        height: 21px;
+        margin: 30px 0 25px;
+        color: #ff4e56;
+        text-align: center;
+      }
+
+      button {
+        width: 100%;
+        height: 50px;
+      }
+      @at-root .skipToSignup {
+        text-align: center;
+        margin: 30px 0;
+
+        a {
+          color: $themeColor;
+        }
+      }
+
+      .tip {
+        @include mobi-font-P12;
+        color: #82888e;
+        text-align: center;
+
+        a {
+          @include mobi-font-P15;
+        }
+      }
+    }
+  }
+}

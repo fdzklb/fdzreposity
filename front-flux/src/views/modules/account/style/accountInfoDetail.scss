@@ -1,0 +1,41 @@
+@import './common';
+@import '../../../style/fontStyle';
+
+.account__detail {
+  position: relative;
+  padding-bottom: 55px;
+
+  .detail_title {
+    padding-left: 32px;
+    @include mobi-font-H4;
+    margin-bottom: 32px;
+  }
+
+  .detail_key {
+    padding-left: 32px;
+    @include mobi-font-P4;
+    margin-bottom: 22px;
+  }
+
+  .detail_value {
+    margin-left: -46px;
+    @include mobi-font-P6;
+    margin-bottom: 22px;
+  } //edit button
+
+  .edit_button_a {
+    position: absolute;
+    bottom: 2px;
+    left: 32px;
+    z-index: 100;
+  }
+
+  .edit_icon {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .detail_title_cantact {
+    margin-top: 25px;
+  }
+}

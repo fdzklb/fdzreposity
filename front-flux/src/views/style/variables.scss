@@ -1,0 +1,58 @@
+/*color variables
+*==========================================================*/
+//--gray-color--
+$mobi-color-gray-dark: #323c47;
+$mobi-color-gray-normal: #82888e;
+$mobi-color-gray-light: #bcc4ca;
+
+//--brand-color-----
+$mobi-color-brand: #515cf0;
+//brand-color-click
+$mobi-color-brand-click: #4b8bff;
+//--brand-gradient-color-hover
+$mobi-color-brand-hover-1: $mobi-color-brand;
+$mobi-color-brand-hover-2: $mobi-color-brand-click;
+
+//--navigation--
+$mobi-color-navigation: #0d0c2b;
+
+$mobi-color-btn-border: #dee1e9;
+$mobi-color-table-header: #f1f3f8;
+$mobi-color-table-hover: #f9fbfb;
+
+//--themes--
+$theme-color: #515cf0;
+$theme-menu-active: #4586ff;
+
+/*
+ * Typography
+ * ====================================================================== */
+
+$login-italic: 'georgiai';
+$font-family-base: 'Microsoft YaHei', 'PingFangSC', 'Arial', 'Helvetica';
+
+/*home variables
+============================================================================*/
+//-- Colors--
+
+$white-base: hsl(255, 255, 255);
+$gray-darker: #222; /* color(black lightness(+13.5%)) */
+$gray-dark: #404040; /* color(black lightness(+25%)) */
+$gray: #555; /* color(black lightness(+33.5%)) */
+$gray-light: #777; /* color(black lightness(+46.7%)) */
+$gray-lighter: #eee; /* color(black lightness(+93.5%)) */
+
+//--Layout--
+
+$max-content-width: 1000px;
+
+//--Media queries breakpoints--
+
+$screen-xs-min: 480px; /* Extra small screen / phone */
+$screen-sm-min: 768px; /* Small screen / tablet */
+$screen-md-min: 992px; /* Medium screen / desktop */
+$screen-lg-min: 1200px; /* Large screen / wide desktop */
+
+//--Animations--
+
+$animation-swift-out: 0.45s cubic-bezier(0.3, 1, 0.4, 1) 0s;

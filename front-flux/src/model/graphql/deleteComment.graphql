@@ -1,0 +1,9 @@
+mutation(
+  $userId: Int
+){
+  deleteComment(parameters:{
+    userId: $userId
+  }){
+    userId
+  }
+}
