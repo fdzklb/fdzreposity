@@ -1,3 +1,7 @@
+# 项目说明
+   基于mvc框架构造，通过责任链模式将所有view层的组件的事件处理发送到topView后由contrller进行处理。其中state定义状态，根据事件类型(EventType)分发到context(上下文)中进行事件处理和状态转换，由stateManger负责具体状态的的进出栈操作，由具体的Model处理数据的请求和接收。
+
+
 # Node 环境
 8.11.1
 
