@@ -39,14 +39,14 @@ const filter = {password: 0, __v: 0}
 router.post('/login', (req, res) => {
   let {username, password} = req.body
   console.log(username,password)
-  // username=atob(username);password=atob(password);
+  username=atob(username);password=atob(password);
   // 根据username和password查询数据库users, 如果没有, 返回提示错误的信息, 如果有, 返回登陆成功信息(包含user)
   UserModel.findOne({username, password: md5(password)},filter)
     .then(user => {
       res.setHeader('Cache-Control', 'no-store')
       if (user) { // 登陆成功
         console.log("user存在")
-        // 生成一个cookie(userid: user._id), 并交给浏览器保存
+        //生成一个cookie(userid: user._id), 并交给浏览器保存
         res.cookie('userid', user._id, {maxAge: 1000 * 60 * 60 * 24})
         let token = generateToken({username});
         if (user.role_id) {
@@ -222,7 +222,7 @@ router.post('/manage/category/update', (req, res) => {
 
 // 根据分类ID获取分类
 router.get('/manage/category/info', (req, res) => {
-  const categoryId = req.query.categoryId
+  const categoryId = req.query.categoryId||req.query.pCategoryId
   CategoryModel.findOne({_id: categoryId})
     .then(category => {
       res.send({status: 0, data: category})

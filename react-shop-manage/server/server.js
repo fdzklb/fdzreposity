@@ -93,11 +93,13 @@ function verifyToken(token){
 
 app.use((req,res,next)=>{
   let token=req.headers.authorization
+  console.log(req.headers)
+  console.log(req.body)
   const cookie=req.cookies
   const url=req.url
   let cert = fs.readFileSync(path.join(__dirname, './config/rsa_public_key.pem'));//公钥
-  
-  if(url.indexOf('/api/login') !== 0){
+  console.log("url:",req.url)
+  if(url.indexOf('/api/login') !== 0){//如果不是登录请求，则要验证token
       try{
         let result = jwt.verify(token, cert, {algorithms: ['RS256']}) || {};
         let {exp = 0} = result,current = Math.floor(Date.now()/1000);

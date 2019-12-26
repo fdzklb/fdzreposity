@@ -1,0 +1,11 @@
+.idea/
+node_modules/
+build/
+log/
+npm-debug.log
+package-lock.json
+.vscode/
+pm2logs/
+typings/
+tsconfig.json
+typings.json
