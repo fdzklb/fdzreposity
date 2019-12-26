@@ -1,95 +1,96 @@
-import React, {Component} from 'react'
-import { Form, Icon, Input, Button, message } from 'antd'
-import {reqLogin} from '../../api'
-import memoryUtil from '../../utils/memoryUtil'
-import storeUtil from '../../utils/storeUtil'
+import React, { Component } from 'react';
+import { Form, Icon, Input, Button} from 'antd';
 import {Redirect} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {getLoginUserInfo} from './action'
 import './login.less'
-
-
 class Login extends Component {
-
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.form.validateFields(async(err, values) => {
-            if(!err){
-                const {username,password} = values
-                const result = await reqLogin(username, password)
-                if(result.status===0){
-                    message.success('登陆成功')
-
-                    const user = result.data
-                    memoryUtil.user = user  //如果登陆将user信息存到内存
-                    storeUtil.saveUser(user) //保存到localstorge
-                    this.props.history.replace('/admin')
-                } else {
-                    message.error(result.msg)
-                }
-            }
-
-        })
-      };
-
-    render(){
-        //如果内存中有用户信息，跳过登陆界面
-        const user = memoryUtil.user
-        if(user && user._id){
-            return <Redirect to='./admin'/>
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.form.validateFields(
+      async (err, values) => { //可以对所有结果校验，并返回结果
+        if (!err) {
+          values=Object.assign(values,{username:btoa(values.username),password:btoa(values.password)})
+          this.props.getLoginUserInfo(values)
         }
-        const { getFieldDecorator } = this.props.form;
-        return (
-            <div className='login'>
-                <header className='login-header'>
-                    <h1>后台管理系统</h1>
-                </header>
-                <section className='login-content'>
-                    <div className='login-content-form'>
-                        <Form onSubmit={this.handleSubmit} className="login-form">
-                            <h2>用户登录</h2>
-                            <Form.Item>
-                                {getFieldDecorator('username', {
-                                    initialValue: 'admin',
-                                    //声明式验证
-                                    rules: [{ required: true, message: '' },
-                                            {min: 4,message:'长度至少为4位'},
-                                            {max: 12,mseesage: '长度最长为12位'},
-                                            {patten: /^[a-zA-Z0-9_]+$/, message:'用户名必须由英文、数字、下划线组成'}
-                                        ],
-                                })(
-                                    <Input
-                                    prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}//prefix input框前面的小图标
-                                    placeholder="Username"
-                                    />,
-                                )}
-                            </Form.Item>
-                            <Form.Item>
-                            {getFieldDecorator('password', {
-                                rules:  [{ required: true, message: '' },
-                                            {min: 4,message:'长度至少为4位'},
-                                            {max: 12,mseesage: '长度最长为12位'},
-                                            {patten: /^[a-zA-Z0-9_]+$/, message:'密码必须由英文、数字、下划线组成'}
-                                        ],
-                            })(
-                                <Input
-                                prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                type="password"
-                                placeholder="Password"
-                                />,
-                            )}
-                            </Form.Item>
-                            <Form.Item>
-                                <Button type="primary" htmlType="submit" className="login-form-button">
-                                    登陆
-                                </Button>
-                            </Form.Item>
-                        </Form>
-                    </div>
-                   
-                </section>
-            </div>
-        ) 
+      });
+  };
+  // 自定义密码验证规则
+  validatorPwd=(rule, value, callback)=>{
+    // 无论验证成功与否callback()必须调用
+    if(!value){
+      callback('请输入密码！')
+    }else if(value.length<4||value.length>12){
+      callback('密码长度应大于4小于12位！') //验证不通过传入错误提示
     }
+    callback()//验证成功无提示
+  }
+
+  render() {
+    // 如果检测到登录信息自动登录
+    const {userInfo} = this.props 
+    if(userInfo._id){
+      return <Redirect to='/home'/>
+    }
+    const { getFieldDecorator } = this.props.form
+
+    return (
+      <div className='login'>
+        <div className='header'>
+        </div>
+        <div className='content'>
+          <section className='login-form'>
+          <div className='login-label'> <span >管理平台</span></div>
+          <Form onSubmit={this.handleSubmit} className="">
+          <Form.Item>
+          {getFieldDecorator('username', {
+            rules: [
+              { required: true,message: '请输入用户名！',min:4},
+              { message: '用户名长度应大于4小于12位！',min:4,max:12},
+              { message: '用户名只能含有数字、英文、下划线!',pattern:/^[a-zA-Z0-9_]+$/ },//+号可以匹配任意多个字符
+            ],
+            initialValue: 'admin', // 初始值
+          })(
+            <Input
+              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              placeholder="用户名"
+            />,
+          )}
+          </Form.Item>
+          <Form.Item>
+          {getFieldDecorator('password', {
+            rules: [
+              { validator:this.validatorPwd},//自定义校验规则
+            ],
+            initialValue: 'admin', // 初始值
+          })(
+            <Input
+              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              type="password"
+              placeholder="密码"
+            />,
+          )}
+          </Form.Item>
+          <Form.Item>
+          <Button type="primary" htmlType="submit" className='login-btn' onClick={this.onSubmit}>
+            登录
+          </Button>
+          </Form.Item>
+        </Form>
+          </section>
+        </div>
+      </div>
+    );
+  }
 }
 
-const WrapLogin = Form.create()(Login);
-export default WrapLogin
+const WrappeLoginForm = Form.create()(Login);
+
+
+const mapStateToProps=(state)=>({
+  userInfo:state.loginUserInfo
+})
+
+const mapDispatchToProps={getLoginUserInfo}
+
+export default connect(mapStateToProps,mapDispatchToProps)(WrappeLoginForm)
